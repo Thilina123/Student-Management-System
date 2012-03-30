@@ -1,6 +1,8 @@
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -32,10 +34,17 @@ public class SimpleStudentRepository implements StudentRepository {
           studentsDb.put(stu.getRegNumber(),stu);
 	}
 
-	@Override
-	public List<Student> findAllStudents() {
-
-		return (List<Student>) studentsDb;
+	
+    
+    @Override
+	public void findAllStudents() {
+               ArrayList<String> stuList = new ArrayList<String>();
+        for (long i : studentsDb.keySet()) {
+//            stuList.add(studentsDb.get(i).getFirstName());
+            System.out.println(studentsDb.get(i).getFirstName());
+        }
+        
+		
 	}
 
 }

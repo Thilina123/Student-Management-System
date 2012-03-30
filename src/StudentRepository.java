@@ -1,5 +1,6 @@
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface StudentRepository {
@@ -12,5 +13,5 @@ public interface StudentRepository {
 
 	void updateStudent(Student stu);
 
-	List<Student> findAllStudents();
+	void findAllStudents();
 }

@@ -2,12 +2,10 @@
 
 public class StudentManagementSystem {
 
-	private StudentRepository repo;
+	private StudentRepository repo=new SimpleStudentRepository();
 
 	public void listAllStudents() {
-        for (Student student : repo.findAllStudents()) {
-              System.out.println(student.getFirstName()+" "+student.getLastName());
-        }
+        repo.findAllStudents();
     }
 
 	public void registerStudent(Student stu){

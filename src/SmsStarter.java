@@ -10,10 +10,12 @@ public class SmsStarter {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-context.xml");
         context.start();
         sms = (StudentManagementSystem) context.getBean("SMS");
-        Student stu=(Student) context.getBean("stu");
-
-//		sms.listAllStudents();
-////		sms.registerStudent(stu);
-//		sms.listAllStudents();
+        
+        sms.registerStudent((Student) context.getBean("std1"));
+        sms.registerStudent((Student) context.getBean("std2"));
+        sms.registerStudent((Student) context.getBean("std3"));
+		sms.listAllStudents();
+		
+		
     }
 }

@@ -12,7 +12,10 @@
 
 <!-- Put your bean configuration here -->
     <bean id="SMS" class="StudentManagementSystem" />
-    <bean id="stu" class="Student"/>
+<!--    <bean id="stu" class="Student"/>-->
+    <bean id="std1" class="Student" p:firstName="thilina" p:lastName="premasiri" p:regNumber="123" p:address="Galewela"> </bean>
+    <bean id="std2" class="Student" p:firstName="Ranuja" p:lastName="Adhikari" p:regNumber="565" p:address="Matara"> </bean>
+    <bean id="std3" class="Student" p:firstName="Amila" p:lastName="Dissanayaka" p:regNumber="453" p:address="Kandy"> </bean>
     
 <!--    <bean id="StudentRepository1" class="SimpleStudentRepository" p:tempStudent-ref="tempStudent1" />
     <bean id="student1" class="Student"  />-->
